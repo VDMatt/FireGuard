@@ -76,3 +76,28 @@ The red lines are drawn in the instants in which the alarm conditions are satisf
 ![VideoNN](https://user-images.githubusercontent.com/56454542/177171105-efa7a9ef-b540-49b0-b4a6-8fd7755f9ff7.png)
 
 </br>
+</br>
+
+
+The last test was done using the models jointly, like this: if the alarm conditions for the audio network were met, the video network was activated which recorded the final alarm if the alarm conditions for the video network were also satisfied.</br>
+
+Based on these results, the definitive evaluation metrics for every use-case (audio network only, video network only, both networks together) were defined:
+
+- True positives: number of alarms triggered during the "Fire" class sections;
+- False positives: number of alarms triggered during the "Not-Fire" class sections;
+- True negatives: number of sections of "Not-Fire" in which the alarm didn't trigger;
+- False negatives: number of sections of "Fire" in which the alarm didn't trigger;
+- Alarm delay: based on the timestamp in which a test section was changing, alarm latencies were calculated.
+
+</br>
+
+![modelliconfronto](https://user-images.githubusercontent.com/56454542/177191937-233d0ae0-12bf-4b85-b9db-ba0acd21c31c.png)
+
+![AAlarmCDF](https://user-images.githubusercontent.com/56454542/177192731-b267645a-9607-498e-b4ec-d759bef154e7.png)
+![VAlarmCDF](https://user-images.githubusercontent.com/56454542/177192729-0eeb180f-e6ef-4b13-b384-c3fcde75b1eb.png)
+![AVAlarmCDF](https://user-images.githubusercontent.com/56454542/177192727-8adc2ef2-a29e-4f5c-b1f6-cede61455a05.png)
+
+#### Test conclusions
+The audio network is particularly efficient at recognizing true negatives, and has an average alarm latency of around 25 seconds.</br>
+The video network is the fastest with an alarm latency of around 20 seconds and is particularly efficient in detecting false positives, but it can handle a considerable number of false negatives.</br>
+Using the networks jointly involves an expansion of the alarm latency which is fully compensated by the overall increase in precision of the system.</br>
