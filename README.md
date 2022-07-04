@@ -49,18 +49,30 @@ A slide show was created on the audio file in which images of forest fires alter
 
 - Extreme Noise Test (LNT): the sound of fire is lower than that of the background noises and there is a small fire in the picture. </br>
 ![ent](https://user-images.githubusercontent.com/56454542/177165961-7a205fb2-febc-43ed-b8dd-d3ba5c1bebfb.png)
+</br>
+During the test, the device continuously made inferences (data acquisition, neural network execution, saving of results). The test sounds were reproduced using a 40W passive speaker, placing the Arduino at a distance of 1m from it. The slideshow was played on a monitor with minimum brightness and maximum saturation settings, the Arduino was positioned a few centimeters from the monitor so that the camera's field of view included exactly the image shown.</br>
+
 
 ### Alarm Conditions
 
-On the basis of the test results, in particular on the basis of the "Fire" class probability associated with each inference, alarm conditions were defined. These are intended to limit the reporting of false positives while keeping that of true positives as high as possible. 
+On the basis of the test results, in particular on the basis of the "Fire" class probability associated with each inference, alarm conditions were defined. These are intended to limit the reporting of false positives while keeping that of true positives as high as possible, alarms conditions also need to be calibrated to detect a forest fire as quickly ass possible. Based on some test, these alarm conditions were defined:
+
+- Audio CNN: two consecutive inferences with p(fire)>= 0.808
+- Video CNN: four consecutive inferences with p(fire)>= 0.823
+
 
 ### Test Results
 
-The test results are shown in a graph that plots the probability of "Fire" class over time. The time axis is divided into the various test sections: Noise (or "Not-Fire), LNT, MNT, ENT. </br>
+The test results are shown in a graph that plots the probability of "Fire" class over time with a blue line. The time axis is divided into the various test sections: Noise (or "Not-Fire) with a green background, LNT with a yellow background, MNT with a magenta background, ENT with a gray background. </br>
+The red lines are drawn in the instants in which the alarm conditions are satisfied.
 </br>
 #### Audio CNN test results
-![mfeconv1daudio](https://user-images.githubusercontent.com/56454542/177166724-354a5203-ea55-49c5-9719-6d12ef7a124d.png)
+![AudioNN](https://user-images.githubusercontent.com/56454542/177169338-190c8522-1759-4e1f-a9dc-91345296430b.png)
+
 </br>
+
 #### Video CNN test results
+
+![VideoNN](https://user-images.githubusercontent.com/56454542/177171105-efa7a9ef-b540-49b0-b4a6-8fd7755f9ff7.png)
 
 </br>
