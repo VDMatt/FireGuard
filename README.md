@@ -99,5 +99,11 @@ Based on these results, the definitive evaluation metrics for every use-case (au
 
 #### Test conclusions
 The audio network is particularly efficient at recognizing true negatives, and has an average alarm latency of around 25 seconds.</br>
-The video network is the fastest with an alarm latency of around 20 seconds and is particularly efficient in detecting false positives, but it can handle a considerable number of false negatives.</br>
+The video network is the fastest with an alarm latency of around 20 seconds and it is particularly efficient in detecting false positives, but it can handle a considerable number of false negatives.</br>
 Using the networks jointly involves an expansion of the alarm latency which is fully compensated by the overall increase in precision of the system.</br>
+
+## Additional features
+
+- Saving images: all the images taken by the device are saved on an SD card in a text file as pixel matrices, these can be compressed in standard formats using a computer and they can be used to expand the dataset.
+- Alarm signaling: the alarm signaling is done through the LoRaWAN protocol. It is a low cost and low power consumption protocol.
+- The signaling packet includes the mean and standard deviation of the p(fire) associated with the inferences that triggered the alarms (both for the audio network and for the video network). These values give an indication of how likely a forest fire is: a high standard deviation is can indicate uncertain measurements, conversely a low standard deviation could indicate that the alarm is not a false positive.
