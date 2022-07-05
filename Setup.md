@@ -3,7 +3,7 @@
 ### Hardware/Software Requirements
 
 - [Arduino Portenta H7](https://www.arduino.cc/pro/hardware/product/portenta-h7)
-- [Portenta Vision Shield (LoRaWAN](https://store.arduino.cc/products/arduino-portenta-vision-shield-lora%C2%AE)
+- [Portenta Vision Shield (LoRaWAN)](https://store.arduino.cc/products/arduino-portenta-vision-shield-lora%C2%AE)
 - [LoRaWAN antenna](https://it.rs-online.com/web/p/arduino-shield/1697591?cm_mmc=IT-PLA-DS3A-_-google-_-CSS_IT_IT_Raspberry_Pi_&_Arduino_e_Strumenti_di_sviluppo_Whoop-_-(IT:Whoop!)+Arduino+-+Shield-_-1697591)
 - SD Card
 - Arduino IDE
