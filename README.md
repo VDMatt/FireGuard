@@ -34,11 +34,11 @@ A CNN architecture developed by google (MobileNet) was used for the image classi
 | Video (RGB input) | 95.1%  |
 | Video (Grayscale input) | 82.6% |
 
-The camera supplied with the Portenta H7 captures grayscale images, which is why a model that takes grayscale images as input has been designed. 
+The camera supplied with the Portenta H7 captures grayscale images, which is why a model that takes grayscale images as input has been used. 
 
 ## On-Device Test
 
-A test has been designed to verify the correct functioning of the device: an hour-long audio file has been created in which sections of "Fire" and "Non-Fire" sections alternate at intervals of 2-4 minutes. </br>
+A test has been designed to verify the correct functioning of the device: an hour-long audio file has been created in which sections of "Fire" and "Non-Fire" alternate at intervals of 2-4 minutes. </br>
 A slide show was created on the audio file in which images of forest fires alternate with images of forest environments in normal conditions. The images have the same context of the reproduced sounds so that the fire is shown while playing a section of class "Fire" and vice versa. </br>
 "Fire" sections were further divided according to the intensity of the fire:</br>
 - Low Noise Test (LNT): the sound of fire is higher than that of background noises and the fire is the main element of the shot. </br>
