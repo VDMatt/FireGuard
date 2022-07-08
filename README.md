@@ -101,7 +101,7 @@ Based on these results, the definitive evaluation metrics for every use-case (au
 
 #### Test conclusions
 The audio network is particularly efficient at recognizing true negatives, and has an average alarm latency of around 25 seconds.</br>
-The video network is the fastest with an alarm latency of around 20 seconds and it is particularly efficient in detecting false positives, but it can handle a considerable number of false negatives.</br>
+The video network is the fastest with an alarm latency of around 20 seconds and it is particularly efficient in detecting true positives, but it produces a considerable number of false positives.</br>
 Using the networks jointly involves an expansion of the alarm latency which is fully compensated by the overall increase in precision of the system.</br>
 
 ## Additional features
